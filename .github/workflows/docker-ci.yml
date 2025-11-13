@@ -29,6 +29,8 @@ jobs:
       # Schritt 5: Build React App
       - name: Build project
         run: npm run build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
 
       # Schritt 6: Docker Buildx einrichten
       - name: Set up Docker Buildx
